@@ -1,0 +1,654 @@
+/* Importação de fontes do Google Fonts (Mantendo as fontes medievais/fantasia) */
+@import url('https://fonts.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=MedievalSharp&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@400;700&display=swap');
+
+
+/* --- Variáveis de Cores e Texturas (Atualizadas para Verde Musgo) --- */
+:root {
+    /* Cores */
+    --cor-fundo-geral: #f0e6c7; /* Pergaminho claro / Areia - Mantido */
+    --cor-fundo-claro: #fcf8e8; /* Quase branco, para cards - Mantido */
+
+    /* Novos tons de Verde Musgo */
+    --cor-musgo-escuro: #4A5D4D; /* Verde Musgo Escuro - Substitui o azul/ferro escuro */
+    --cor-musgo-medio: #6B8E6D; /* Verde Musgo Médio - Substitui o cinza/aço */
+    --cor-musgo-claro: #9BB89A; /* Verde Musgo Claro - Para destaques sutis */
+
+    --cor-cobre: #B87333; /* Cobre - Mantido */
+    --cor-cobre-hover: #965A2C; /* Cobre mais escuro - Mantido */
+    --cor-ouro-velho: #DAA520; /* Dourado velho - Mantido */
+    --cor-texto-principal: #4A3C32; /* Marrom escuro - Mantido */
+    --cor-texto-claro: #ecf0f1; /* Cinza claro (para contraste com fundo escuro) - Mantido */
+    --cor-borda: #7b5b3a; /* Marrom bronze - Mantido */
+
+    /* Fontes - Mantidas */
+    --fonte-titulo: 'IM Fell Double Pica', serif;
+    --fonte-corpo: 'Merriweather', serif;
+
+    /* Texturas - Mantidas */
+    --textura-pergaminho: url('../img/pergaminho_bg.jpg');
+    --textura-metal-escuro: url('../img/metal_escuro_bg.jpg'); /* Esta textura agora será usada com tons de verde */
+    --textura-cobre-fundo: url('../img/cobre_detalhe.jpg');
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-geral);
+    background-image: var(--textura-pergaminho);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: var(--cor-musgo-escuro); /* AGORA VERDE MUSGO ESCURO */
+    background-image: var(--textura-metal-escuro);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--cor-texto-claro);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    border-bottom: 5px solid var(--cor-cobre);
+}
+
+header .logo {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+    border: 3px solid var(--cor-ouro-velho);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.5);
+}
+
+header h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    color: var(--cor-ouro-velho);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+header .slogan {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--cor-texto-claro);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* --- Navegação (Nav) --- */
+nav {
+    background-color: var(--cor-musgo-medio); /* AGORA VERDE MUSGO MÉDIO */
+    background-image: var(--textura-metal-escuro);
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-bottom: 2px solid var(--cor-borda);
+    border-top: 2px solid var(--cor-borda);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--cor-cobre);
+    color: var(--cor-musgo-escuro); /* Cor do texto no hover */
+    border-color: var(--cor-ouro-velho);
+}
+
+/* --- Conteúdo Principal (Main) --- */
+main {
+    padding: 40px 0;
+}
+
+/* Seção do Mapa */
+#mapa-mundo {
+    text-align: center;
+    background-color: var(--cor-fundo-claro);
+    background-image: var(--textura-pergaminho);
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 4px solid var(--cor-borda);
+}
+
+#mapa-mundo h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.8em;
+    color: var(--cor-cobre);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+#mapa-mundo p {
+    font-size: 1.15em;
+    margin-bottom: 30px;
+    color: var(--cor-texto-principal);
+}
+
+.responsive-map {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--cor-ouro-velho);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    filter: sepia(20%) saturate(120%);
+    transition: filter 0.5s ease;
+}
+
+.responsive-map:hover {
+    filter: sepia(0%) saturate(100%);
+}
+
+
+/* Seção de Últimas Atualizações (Grid de Artigos) */
+#ultimas-atualizacoes {
+    background-color: var(--cor-fundo-claro);
+    background-image: var(--textura-pergaminho);
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 4px solid var(--cor-borda);
+}
+
+#ultimas-atualizacoes h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5em;
+    color: var(--cor-cobre);
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.articles-grid article {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoração para os artigos */
+.articles-grid article::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--textura-pergaminho);
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.articles-grid article h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8em;
+    margin-bottom: 12px;
+}
+
+.articles-grid article h3 a {
+    color: var(--cor-musgo-escuro); /* AGORA VERDE MUSGO ESCURO */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.articles-grid article h3 a:hover {
+    color: var(--cor-cobre);
+}
+
+.articles-grid .article-thumb {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+    border: 2px solid var(--cor-ouro-velho);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.articles-grid article p {
+    font-size: 1em;
+    color: var(--cor-texto-principal);
+    margin-bottom: 20px;
+}
+
+.articles-grid .read-more {
+    display: inline-block;
+    background-color: var(--cor-cobre);
+    color: var(--cor-texto-claro);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid var(--cor-ouro-velho);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.articles-grid .read-more:hover {
+    background-color: var(--cor-cobre-hover);
+    color: #fff;
+}
+
+/* --- Aside (Conteúdo Complementar) --- */
+aside {
+    background-color: var(--cor-fundo-claro);
+    background-image: var(--textura-pergaminho);
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    border: 4px solid var(--cor-borda);
+}
+
+aside h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2em;
+    color: var(--cor-cobre);
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+aside .aside-banner {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--cor-ouro-velho);
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+aside figcaption {
+    font-style: italic;
+    color: var(--cor-texto-principal);
+    margin-bottom: 18px;
+    font-size: 1.05em;
+}
+
+aside p {
+    font-size: 1em;
+    color: var(--cor-texto-principal);
+    margin-bottom: 25px;
+}
+
+aside .aside-link {
+    background-color: var(--cor-musgo-medio); /* AGORA VERDE MUSGO MÉDIO */
+    color: var(--cor-texto-claro);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--cor-cobre);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+aside .aside-link:hover {
+    background-color: var(--cor-musgo-escuro); /* AGORA VERDE MUSGO ESCURO */
+    border-color: var(--cor-ouro-velho);
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: var(--cor-musgo-escuro); /* AGORA VERDE MUSGO ESCURO */
+    background-image: var(--textura-metal-escuro);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.95em;
+    margin-top: 50px;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.3);
+    border-top: 5px solid var(--cor-cobre);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: var(--cor-ouro-velho);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor-cobre);
+}
+
+
+/* --- Estilos para a página de Login (index.html) --- */
+.login-page-body {
+    background-color: var(--cor-musgo-escuro); /* AGORA VERDE MUSGO ESCURO */
+    background-image: var(--textura-metal-escuro);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    color: var(--cor-texto-claro);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.login-container {
+    background-color: rgba(74, 93, 77, 0.9); /* AGORA VERDE MUSGO ESCURO com transparência */
+    background-image: var(--textura-metal-escuro);
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    border: 5px solid var(--cor-cobre);
+    position: relative;
+    overflow: hidden;
+}
+/* Detalhes de cantos para a caixa de login */
+.login-container::before, .login-container::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 3px solid var(--cor-ouro-velho);
+}
+.login-container::before {
+    top: -15px; left: -15px;
+    border-right: none; border-bottom: none;
+}
+.login-container::after {
+    bottom: -15px; right: -15px;
+    border-left: none; border-top: none;
+}
+
+
+.login-logo {
+    max-width: 150px;
+    margin-bottom: 25px;
+    border: 3px solid var(--cor-ouro-velho);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.7);
+}
+
+.login-container h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3em;
+    color: var(--cor-ouro-velho);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.login-container .slogan-login {
+    font-style: italic;
+    color: var(--cor-texto-claro);
+    margin-bottom: 35px;
+    font-size: 1.1em;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--cor-texto-claro);
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--cor-cobre);
+    border-radius: 8px;
+    background-color: #6a6a6a; /* Um cinza mais escuro para o input (não verde) */
+    color: var(--cor-texto-claro);
+    font-size: 1.1em;
+    box-shadow: inset 0 1px 5px rgba(0,0,0,0.3);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    border-color: var(--cor-ouro-velho);
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.7);
+    outline: none;
+}
+
+.input-group input[type="text"]::placeholder,
+.input-group input[type="password"]::placeholder {
+    color: #bbb;
+}
+
+.btn-login {
+    background-color: var(--cor-cobre);
+    color: var(--cor-musgo-escuro); /* AGORA VERDE MUSGO ESCURO */
+    padding: 15px 30px;
+    border: 2px solid var(--cor-ouro-velho);
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-login:hover {
+    background-color: var(--cor-cobre-hover);
+    color: #fff;
+    border-color: var(--cor-cobre);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.login-links {
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+.login-links a {
+    color: var(--cor-ouro-velho);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.login-links a:hover {
+    color: var(--cor-cobre);
+}
+
+.footer-login {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: var(--cor-texto-claro);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #mapa-mundo,
+    #ultimas-atualizacoes,
+    aside {
+        padding: 25px;
+        margin: 0 15px 40px;
+    }
+
+    .login-container {
+        padding: 35px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .logo {
+        max-width: 120px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+
+    #mapa-mundo h2,
+    #ultimas-atualizacoes h2,
+    aside h3 {
+        font-size: 2em;
+    }
+
+    .articles-grid article h3 {
+        font-size: 1.5em;
+    }
+
+    .login-container {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    .login-container h1 {
+        font-size: 2.2em;
+    }
+}
+
+nav {
+    background-color: var(--cor-musgo-medio); /* AGORA VERDE MUSGO MÉDIO */
+    background-image: var(--textura-metal-escuro);
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-bottom: 2px solid var(--cor-borda);
+    border-top: 2px solid var(--cor-borda);
+}
+
+nav ul {
+    list-style: none !important; /* FORÇA a remoção do marcador */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 !important; /* Garante que não há padding extra aqui */
+    margin: 0 !important;  /* Garante que não há margin extra aqui */
+}
+
+nav ul li {
+    margin: 0 18px; /* Mais espaçamento */
+    list-style: none !important; /* Garante que nenhum li individual tenha marcador */
+    /* Garante que o item da lista se comporte como um bloco flexível */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+    display: block !important; /* FORÇA o link a ser um bloco para ocupar o padding */
+    width: 100%; /* Garante que o link preencha o li */
+    text-align: center; /* Centraliza o texto dentro do link */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--cor-cobre); /* Cobre ao passar o mouse */
+    color: var(--cor-musgo-escuro); /* Cor do texto no hover */
+    border-color: var(--cor-ouro-velho);
+}
