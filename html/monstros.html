@@ -1,1 +1,153 @@
-<h1>cuidado em</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monstros - Blog de RPG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Para organizar os elementos verticalmente */
+            justify-content: flex-start; /* Alinha o conteúdo no topo */
+            align-items: center;
+            min-height: 100vh;
+            /* PROPRIEDADES PARA A IMAGEM DE FUNDO (COLOQUE A SUA AQUI) */
+            background-image: url(../imagens/93fff278-a745-4cd0-8396-014b5566fbf8.__CR0\,0\,970\,300_PT0_SX970_V1___.jpg); /* Ex: url('imagens/fundo_caverna.jpg') */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: rgba(240, 230, 210, 0.9); /* Bege claro com um pouco de transparência */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 700px;
+            line-height: 1.6;
+            margin-top: 20px; /* Adiciona margem no topo */
+            display: flex; /* Adicionado para centralizar conteúdo interno como um todo */
+            flex-direction: column; /* Organiza os itens (botão, título, monstros) em coluna */
+            align-items: center; /* Centraliza os itens horizontalmente dentro do container */
+        }
+
+        /* Estilo para o botão Voltar para Home */
+        .home-button {
+            display: inline-block;
+            background-color: #8fbc8f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            align-self: flex-start; /* Alinha o botão à esquerda dentro do container */
+        }
+
+        .home-button:hover {
+            background-color: #7a9c7a;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8fbc8f;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            width: 100%; /* Para o título centralizado funcionar bem com flexbox */
+        }
+
+        h2 {
+            color: #5a7d5a;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #d3d3d3;
+            padding-bottom: 5px;
+            width: 100%; /* Para o subtítulo funcionar bem com flexbox */
+            text-align: left; /* Garante que subtítulos fiquem à esquerda */
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: left; /* Garante que parágrafos fiquem à esquerda */
+        }
+
+        /* Estilo para cada bloco de monstro (reaproveitando o estilo 'race' e renomeando) */
+        .monster {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #d3d3d3;
+            border-radius: 8px;
+            background-color: #fff; /* Fundo branco para os monstros */
+            width: 100%; /* Ocupa a largura total do container */
+            box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+
+            display: flex; /* Ativa o flexbox para alinhar imagem e texto */
+            align-items: center; /* Alinha verticalmente os itens no centro */
+            gap: 20px; /* Espaçamento entre a imagem e o bloco de texto */
+        }
+
+        .monster img {
+            width: 100px; /* Largura da imagem, ajuste se necessário */
+            height: 100px; /* Altura da imagem, para ser quadrada como thumbnails */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer, cortando se necessário */
+            border-radius: 4px; /* Arredonda os cantos da imagem */
+            flex-shrink: 0; /* Impede que a imagem encolha se o texto for muito longo */
+        }
+
+        .monster-info {
+            flex-grow: 1; /* Permite que o bloco de texto ocupe o espaço restante */
+            text-align: left;
+        }
+
+        .monster-info h3 {
+            color: #8fbc8f; /* Cor do título do monstro */
+            margin-top: 0; /* Remove margem superior padrão do h3 */
+            margin-bottom: 5px;
+        }
+
+        .monster-info p {
+            margin-bottom: 0; /* Remove margem inferior padrão do p dentro do info */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../home.html" class="home-button">← Voltar para a Home</a>
+
+        <h1>Bestiário de Arcana</h1>
+
+        <div class="monster">
+            <img src="../imagens/Copy-of-Copy-of-Untitled3.jpg" alt="Ícone de Beholder">
+            <div class="monster-info">
+                <h3>Beholder</h3>
+                <p>O Beholder é um monstro esférico com um olho central e múltiplos talos oculares, cada um com um poder mágico diferente. Criaturas tirânicas, elas buscam dominar e aniquilar tudo à sua volta.</p>
+            </div>
+        </div>
+
+        <div class="monster">
+            <img src="../imagens/dnd-goblin-5e-race-guide-goblin-face-close-up.jpg" alt="Ícone de Goblin">
+            <div class="monster-info">
+                <h3>Goblin</h3>
+                <p>Pequenos, covardes e traiçoeiros, os goblins são criaturas malignas que vivem em tribos. Preferem emboscadas e ataques em massa para superar seus inimigos.</p>
+            </div>
+        </div>
+
+        <div class="monster">
+            <img src="../imagens/tumblr_nbkxuq9vym1thxsmlo1_1280.jpg.pagespeed.ce.qoN6_r5Tbp.jpg" alt="Ícone de Grifo">
+            <div class="monster-info">
+                <h3>Grifo</h3>
+                <p>Criaturas majestosas com corpo de leão e cabeça e asas de águia, os grifos são feras orgulhosas e ferozes. Podem ser domados, servindo como montarias poderosas.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
