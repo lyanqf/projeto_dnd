@@ -10,17 +10,16 @@
             background-color: #f4f4f4; /* Cor de fundo reserva caso a imagem não carregue */
             color: #333;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 20px; /* Adiciona um padding ao redor do container central */
+            /* Removido display: flex, justify-content, align-items do body para usar margin: auto no container */
+            min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela */
+
             /* PROPRIEDADES PARA A IMAGEM DE FUNDO */
-            background-image: url(hero_dmgscreen_0.jpg); /* <-- COLOQUE AQUI O CAMINHO/URL DA SUA IMAGEM */
-            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-image: url('hero_dmgscreen_0.jpg'); /* <-- COLOQUE AQUI O CAMINHO/URL DA SUA IMAGEM */
+            background-size: cover; /* Faz a imagem cubrir todo o fundo */
             background-repeat: no-repeat; /* Impede que a imagem se repita */
             background-position: center center; /* Centraliza a imagem no fundo */
-            background-attachment: fixed; /* Opcional: Faz a imagem de fundo permanecer fixa ao rolar a página */
+            background-attachment: fixed; /* Faz a imagem de fundo permanecer fixa ao rolar a página */
         }
 
         .container {
@@ -31,22 +30,29 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra um pouco mais escura para destacar */
             width: 100%;
             max-width: 500px;
+            margin: 40px auto; /* CENTRALIZA O CONTAINER HORIZONTALMENTE */
+            line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+            /* REMOVIDO: display: flex; flex-direction: column; align-items: center; do .container */
+            text-align: left; /* Garante que o conteúdo padrão (como o botão) alinhe à esquerda */
         }
 
         h1 {
-            text-align: center;
+            text-align: center; /* Mantém o título centralizado */
             color: #8fbc8f; /* Verde musgo claro do seu site */
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra no texto para melhor legibilidade */
+            /* REMOVIDO: width: 100%; pois agora ele se ajusta naturalmente */
         }
 
         p {
-            text-align: center;
+            text-align: center; /* Mantém o parágrafo centralizado */
             margin-bottom: 25px;
+            /* REMOVIDO: width: 100%; pois agora ele se ajusta naturalmente */
         }
 
         .form-group {
             margin-bottom: 15px;
+            /* REMOVIDO: width: 100%; pois já deveriam ocupar 100% por padrão */
         }
 
         label {
@@ -58,7 +64,7 @@
         input[type="text"],
         input[type="email"],
         textarea {
-            width: 100%;
+            width: 100%; /* Continua com 100% para os campos */
             padding: 10px;
             border: 1px solid #c7c7c7; /* Borda um pouco mais forte para os campos */
             border-radius: 4px;
@@ -79,17 +85,37 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
-            width: 100%;
+            width: 100%; /* Continua com 100% para o botão */
             transition: background-color 0.3s ease; /* Transição suave no hover */
         }
 
         button:hover {
             background-color: #7a9c7a; /* Um tom um pouco mais escuro para o hover */
         }
+
+        /* Estilo para o botão Voltar para Home */
+        .home-button {
+            display: inline-block; /* Ou 'block' se quiser que ocupe sua própria linha completa */
+            background-color: #8fbc8f; /* Mesma cor dos outros botões */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none; /* Tira o sublinhado do link */
+            font-size: 14px;
+            margin-bottom: 20px; /* Espaçamento abaixo do botão */
+            transition: background-color 0.3s ease;
+            /* REMOVIDO: align-self: flex-start; já que o container não é mais flex column */
+        }
+
+        .home-button:hover {
+            background-color: #7a9c7a;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="../home.html" class="home-button">← Voltar para a Home</a>
+
         <h1>Fale Conosco!</h1>
         <p>Tem alguma dúvida, sugestão de aventura ou quer mandar uma mensagem arcana? Mande por aqui!</p>
         <form action="#" method="POST">

@@ -17,7 +17,7 @@
             min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela */
 
             /* PROPRIEDADES PARA A IMAGEM DE FUNDO */
-            background-image: url(cb02359a4319f301fc323f8ce7fb22ed.png); /* <-- COLOQUE AQUI O CAMINHO/URL DA SUA IMAGEM */
+            background-image: url(cb02359a4319f301fc323f8ce7fb22ed.png); /* Substitua pelo caminho real da sua imagem */
             background-size: cover; /* Faz a imagem cobrir todo o fundo */
             background-repeat: no-repeat; /* Impede que a imagem se repita */
             background-position: center center; /* Centraliza a imagem no fundo */
@@ -34,13 +34,17 @@
             max-width: 700px; /* Um pouco mais largo para o texto */
             line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
             /* Sem max-height ou overflow aqui para deixar o conteúdo determinar a altura */
+            display: flex; /* Adicionado para organizar os itens internos em coluna */
+            flex-direction: column; /* Organiza os itens em coluna */
+            align-items: center; /* Centraliza os itens horizontalmente dentro do container */
         }
 
         h1 {
             text-align: center;
             color: #8fbc8f; /* Verde musgo claro do seu site */
             margin-bottom: 20px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra no texto para melhor legibilidade */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra no texto para legibilidade */
+            width: 100%; /* Garante que o título ocupe a largura total */
         }
 
         h2 {
@@ -49,16 +53,20 @@
             margin-bottom: 15px;
             border-bottom: 1px solid #d3d3d3; /* Linha de separação */
             padding-bottom: 5px;
+            width: 100%; /* Garante que o subtítulo ocupe a largura total */
+            text-align: left; /* Garante que subtítulos fiquem à esquerda */
         }
 
         p {
             margin-bottom: 15px;
+            text-align: left; /* Garante que parágrafos fiquem à esquerda */
         }
 
         ul {
             list-style-type: disc; /* Marcadores de lista */
             margin-left: 20px;
             margin-bottom: 15px;
+            text-align: left; /* Garante que listas fiquem à esquerda */
         }
 
         li {
@@ -70,6 +78,7 @@
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px dashed #d3d3d3;
+            width: 100%; /* Garante que o CTA section ocupe a largura total */
         }
 
         .cta-section a {
@@ -81,15 +90,36 @@
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s ease;
+            margin: 0 10px; /* Espaçamento entre os botões CTA */
         }
 
         .cta-section a:hover {
+            background-color: #7a9c7a;
+        }
+
+        /* Estilo para o botão Voltar para Home */
+        .home-button {
+            display: inline-block; /* Para o botão se ajustar ao conteúdo */
+            background-color: #8fbc8f; /* Mesma cor dos botões CTA */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none; /* Tira o sublinhado do link */
+            font-size: 14px;
+            margin-bottom: 20px; /* Espaçamento abaixo do botão */
+            transition: background-color 0.3s ease;
+            align-self: flex-start; /* Alinha o botão à esquerda dentro do container */
+        }
+
+        .home-button:hover {
             background-color: #7a9c7a;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="../home.html" class="home-button">← Voltar para a Home</a>
+
         <h1>Sobre a Guilda do Pergaminho Antigo</h1>
         <p>Bem-vindos, aventureiros e contadores de histórias! Este é o refúgio digital da <strong>Guilda do Pergaminho Antigo</strong>, um espaço dedicado a todos que vivem e respiram o universo do RPG de mesa.</p>
 
@@ -112,8 +142,7 @@
         <div class="cta-section">
             <p>Tem alguma pergunta ou quer compartilhar sua própria saga?</p>
             <a href="../contato/contato.html">Mande-nos uma Mensagem Arcana!</a>
-            <a href="../home.html" class="home-button">Voltar para a Home</a>
-        </div>
+            </div>
     </div>
 </body>
 </html>

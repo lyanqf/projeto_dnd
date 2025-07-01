@@ -3,57 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resumo de D&D</title>
+  <title>Como Jogar - D&D</title>
   <style>
-    /* General Body Styles */
+    /* General Body Styles - Consistente com as outras páginas */
     body {
-      background-color: #eff8ea;
-      background-image:url(../imagens/how\ to\ play.jpg);
-      color: #333333;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4; /* Fundo geral claro */
+      color: #333;
       margin: 0;
-      padding: 20px;
-      line-height: 1.6;
+      padding: 20px; /* Adiciona padding ao redor do container central */
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Centraliza o container verticalmente */
+      min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela */
+
+      /* PROPRIEDADES PARA A IMAGEM DE FUNDO - Consistente com as outras páginas */
+      background-image: url('../imagens/how to play.jpg'); /* Ajuste o caminho da sua imagem */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
     }
 
-    /* Container for the content */
+    /* Container for the content - Consistente com as outras páginas */
     .container {
-      background-color: #e0debefb;
+      background-color: rgba(240, 230, 210, 0.9); /* Bege claro com 90% de opacidade */
       padding: 30px;
-      margin: 40px auto;
-      max-width: 800px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-top: 5px solid #D4C9B4;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra consistente */
+      width: 100%;
+      max-width: 800px;
+      line-height: 1.6;
+      /* Remove margin: 40px auto; pois o flexbox do body já centraliza */
     }
 
-    /* Main Heading (h1) */
+    /* Main Heading (h1) - Consistente com as outras páginas */
     .container h1 {
-      color: #5C7B6C;
+      color: #8fbc8f; /* Verde musgo claro */
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 25px;
       padding-bottom: 10px;
-      border-bottom: 1px solid #E0E0E0;
+      border-bottom: 1px solid #d3d3d3; /* Borda consistente */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra para legibilidade */
     }
 
-    /* Subheadings (h2) */
+    /* Subheadings (h2) - Consistente com as outras páginas */
     .container h2 {
-      color: #4A6352;
+      color: #5a7d5a; /* Verde um pouco mais escuro */
       font-size: 1.8em;
       margin-top: 35px;
       margin-bottom: 15px;
-      border-left: 5px solid #FFD700;
+      border-left: 5px solid #8fbc8f; /* Borda lateral com a cor primária */
       padding-left: 10px;
     }
 
-    /* Paragraphs */
+    /* Paragraphs - Consistente com as outras páginas */
     .container p {
-      color: #555555;
+      color: #333; /* Cor do texto padrão */
       margin-bottom: 15px;
     }
 
-    /* Unordered Lists */
+    /* Unordered Lists - Consistente com as outras páginas */
     .container ul {
       list-style-type: disc;
       margin-left: 25px;
@@ -62,37 +73,52 @@
 
     .container ul li {
       margin-bottom: 8px;
-      color: #444444;
+      color: #333; /* Cor do texto padrão */
     }
 
-    /* Strong/Bold text */
+    /* Strong/Bold text - Consistente com as outras páginas */
     .container b {
-      color: #5C7B6C;
+      color: #5a7d5a; /* Destaque com o verde mais escuro do h2 */
       font-weight: bold;
     }
 
-    /* Horizontal Rule (<hr>) */
+    /* Horizontal Rule (<hr>) - Consistente com as outras páginas */
     hr {
       border: none;
-      border-top: 1px dashed #D4C9B4;
+      border-top: 1px dashed #d3d3d3; /* Traço consistente */
       margin: 30px 0;
     }
 
-    /* Links */
+    /* Links (gerais, fora de botões) - Mantido o estilo original da página, caso prefira */
     a {
-      color: #5C7B6C;
+      color: #5C7B6C; /* Cor original de link da página Como Jogar */
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
-    a:hover {
-      color: #FFD700;
-      text-decoration: underline;
+    /* Estilo para o botão Voltar para Home - Consistente com as outras páginas */
+    .home-button {
+      display: inline-block;
+      background-color: #8fbc8f; /* VERDE MUSGO CLARO - ESTA É A COR DESEJADA */
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px; /* Espaçamento abaixo do botão */
+      transition: background-color 0.3s ease;
+      align-self: flex-start; /* Alinha o botão à esquerda dentro do container */
+    }
+
+    .home-button:hover {
+      background-color: #7a9c7a; /* Um tom um pouco mais escuro para o hover */
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <a href="../home.html" class="home-button">← Voltar para a Home</a>
+
     <h1>Resumo de Dungeons & Dragons (D&D)</h1>
     <p>Dungeons & Dragons (D&D) é um <b>RPG de mesa</b> onde você e seus amigos contam uma história juntos.</p>
     
