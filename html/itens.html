@@ -2,141 +2,181 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Armas Básicas de D&D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itens - Blog de RPG</title>
     <style>
         body {
-    background-color: #f4ecd9;
-    background-image:url(../imagens/blacksmith.jpg);
-    color: #3f5236;
-    font-family: 'Georgia', serif;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Fundo geral claro - consistente */
+            color: #333;
+            margin: 0;
+            padding: 20px; /* Padding ao redor do container */
+            display: flex;
+            flex-direction: column; /* Para organizar elementos verticalmente */
+            justify-content: flex-start; /* Alinha o conteúdo no topo */
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            min-height: 100vh; /* Garante que o body ocupe no mínimo a altura da tela */
 
-/* Cabeçalho */
-header {
-    background-color: #3f5236;
-    color: #d49d18;
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: 3px solid #7a5c3e;
-}
+            /* PROPRIEDADES PARA A IMAGEM DE FUNDO - Consistente com outras páginas */
+            background-image: url('../imagens/blacksmith.jpg'); /* <-- COLOQUE AQUI O CAMINHO/URL DA SUA IMAGEM */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 2.8em;
-}
+        .container {
+            background-color: rgba(240, 230, 210, 0.9); /* Bege claro com transparência - consistente */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra consistente */
+            width: 100%;
+            max-width: 700px; /* Largura máxima consistente com Raças/Monstros */
+            line-height: 1.6;
+            margin-top: 20px; /* Margem superior consistente */
+            display: flex; /* Para organizar itens internos em coluna e centralizar */
+            flex-direction: column;
+            align-items: center; /* Centraliza itens horizontalmente dentro do container */
+        }
 
-header p {
-    margin: 5px 0 0;
-    font-style: italic;
-    color: #faf7ef;
-}
+        /* Estilo para o botão Voltar para Home - Consistente com outras páginas */
+        .home-button {
+            display: inline-block;
+            background-color: #8fbc8f; /* Verde musgo claro - consistente */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            align-self: flex-start; /* Alinha o botão à esquerda dentro do container */
+        }
 
-/* Navegação */
-nav {
-    background-color: #708e63;
-    padding: 12px 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    border-top: 2px solid #3f5236;
-    border-bottom: 3px solid #7a5c3e;
-}
+        .home-button:hover {
+            background-color: #7a9c7a; /* Tom mais escuro para hover - consistente */
+        }
 
-nav a {
-    color: #faf7ef;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
+        h1 {
+            text-align: center;
+            color: #8fbc8f; /* Verde musgo claro - consistente */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #d3d3d3; /* Borda consistente */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sombra para legibilidade - consistente */
+            width: 100%; /* Para centralizar com flexbox */
+        }
 
-nav a:hover {
-    color: #d49d18;
-}
+        h2 {
+            color: #5a7d5a; /* Verde um pouco mais escuro - consistente */
+            font-size: 1.8em;
+            margin-top: 0; /* Ajuste para dentro do .item-info */
+            margin-bottom: 5px; /* Ajuste para dentro do .item-info */
+            /* Removido border-left e padding-left daqui, será no h3 ou no .item */
+            text-align: left; /* Garante alinhamento à esquerda */
+        }
+        
+        /* h2 span não será mais necessário com a nova paleta de cores padrão */
 
-/* Conteúdo Principal */
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #faf7ef;
-    border-radius: 10px;
-    border: 2px solid #7a5c3e;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #333; /* Cor do texto padrão - consistente */
+            margin-bottom: 0; /* Ajuste para dentro do .item-info */
+            text-align: left; /* Garante alinhamento à esquerda */
+        }
 
-.container h2 {
-    color: #7a5c3e;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+        /* Strong/Bold text - Consistente com as outras páginas */
+        b {
+            color: #5a7d5a; /* Destaque com o verde mais escuro do h2 */
+            font-weight: bold;
+        }
 
-.container p {
-    line-height: 1.6;
-    font-size: 1.1em;
-}
+        /* Horizontal Rule (<hr>) - Consistente com as outras páginas */
+        hr {
+            border: none;
+            border-top: 1px dashed #d3d3d3; /* Traço consistente */
+            margin: 30px 0;
+            width: 100%; /* Garante que ocupe a largura total */
+        }
 
-/* Títulos específicos */
-h2 span {
-    color: #d49d18;
-}
+        /* Estilo para cada bloco de item (similar ao .monster/.race) */
+        .item-card { /* Renomeado de .item para evitar conflitos com a tag <item> */
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #d3d3d3; /* Borda consistente */
+            border-radius: 8px;
+            background-color: #fff; /* Fundo branco para os cards de item */
+            width: 100%; /* Ocupa a largura total do container */
+            box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
 
-/* Imagens */
-img {
-    max-width: 100%;
-    border: 4px solid #d49d18;
-    border-radius: 5px;
-    margin-top: 20px;
-}
+            display: flex; /* Ativa o flexbox para alinhar imagem e texto */
+            align-items: center; /* Alinha verticalmente os itens no centro */
+            gap: 20px; /* Espaçamento entre a imagem e o bloco de texto */
+        }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+        .item-card img {
+            width: 100px; /* Largura da imagem, ajuste se necessário */
+            height: 100px; /* Altura da imagem, para ser quadrada como thumbnails */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+            border-radius: 4px; /* Arredonda os cantos da imagem */
+            flex-shrink: 0; /* Impede que a imagem encolha se o texto for muito longo */
+        }
 
+        .item-info { /* Para envolver o h2 e p dentro do item */
+            flex-grow: 1; /* Permite que o bloco de texto ocupe o espaço restante */
+            text-align: left;
+        }
+
+        /* Removendo estilos de @media que não são mais necessários com o novo layout flex */
+        /* @media (max-width: 768px) não será mais usado diretamente */
     </style>
 </head>
-    <body>
-
-    <header>
-        <h1>Guia Rápido de Armas - D&D</h1>
-    </header>
+<body>
 
     <div class="container">
-        <img src="/imagens/sword.jpg" alt="icone espada">
-        <div class="item">
-            <h2>1. Espada</h2>
-            <p>
-                "Pensa na espada como sua opção padrão e mais equilibrada. Ela é ágil, boa para acertar rápido e em quase toda situação, seja cortando ou perfurando. 
-                Se você quer um personagem que seja bom em muitos tipos de luta e não se complique, a espada é sua amiga. 
-                Dá pra usar com um escudo na outra mão ou com as duas mãos para mais força. 
-                É a arma do herói clássico, sabe?"
-            </p>
+        <a href="../home.html" class="home-button">← Voltar para a Home</a>
+
+        <h1>Guia Rápido de Itens - D&D</h1>
+        <div class="item-card">
+            <img src="../imagens/sword.jpg" alt="Ícone de Espada">
+            <div class="item-info">
+                <h2>Espada</h2>
+                <p>
+                    "Pensa na espada como sua opção padrão e mais equilibrada. Ela é ágil, boa para acertar rápido e em quase toda situação, seja cortando ou perfurando. 
+                    Se você quer um personagem que seja bom em muitos tipos de luta e não se complique, a espada é sua amiga. 
+                    Dá pra usar com um escudo na outra mão ou com as duas mãos para mais força. 
+                    É a arma do herói clássico, sabe?"
+                </p>
+            </div>
         </div>
 
-        <div class="item">
-            <h2>2. Machado de Duas Mãos</h2>
-            <p>
-                "Ah, o machado de duas mãos! Essa é pra você que gosta de causar dano DE VERDADE. 
-                É pesado, lento, sim, mas quando acerta... é um estrago. 
-                Se seu personagem é um brutamontes, um bárbaro furioso ou um guerreiro que quer esmagar tudo, pega um machado grandão. 
-                Você vai dar menos golpes, mas cada um vai doer muito no inimigo. 
-                Esqueça escudos, aqui é só força bruta e puro ataque."
-            </p>
+        <div class="item-card">
+            <img src="../imagens/axe.jpg" alt="Ícone de Machado de Duas Mãos">
+            <div class="item-info">
+                <h2>Machado de Duas Mãos</h2>
+                <p>
+                    "Ah, o machado de duas mãos! Essa é pra você que gosta de causar dano DE VERDADE. 
+                    É pesado, lento, sim, mas quando acerta... é um estrago. 
+                    Se seu personagem é um brutamontes, um bárbaro furioso ou um guerreiro que quer esmagar tudo, pega um machado grandão. 
+                    Você vai dar menos golpes, mas cada um vai doer muito no inimigo. 
+                    Esqueça escudos, aqui é só força bruta e puro ataque."
+                </p>
+            </div>
         </div>
 
-        <div class="item">
-            <h2>3. Arco e Flecha</h2>
-            <p>
-                "O arco e flecha é sua ferramenta de 'mantenha distância'. 
-                Se você não quer ficar na linha de frente levando pancada, quer atingir inimigos voadores, ou prefere dar suporte ao time de longe, o arco é perfeito. 
-                Ele exige mais destreza e treinamento, e você precisa carregar suas flechas, mas te dá a vantagem de atacar antes que o inimigo chegue perto. 
-                É a arma do caçador, do arqueiro élfico ou do personagem que prefere a precisão à força."
-            </p>
+        <div class="item-card">
+            <img src="../imagens/636284755900680632.jpg" alt="Ícone de Arco e Flecha">
+            <div class="item-info">
+                <h2>Arco e Flecha</h2>
+                <p>
+                    "O arco e flecha é sua ferramenta de 'mantenha distância'. 
+                    Se você não quer ficar na linha de frente levando pancada, quer atingir inimigos voadores, ou prefere dar suporte ao time de longe, o arco é perfeito. 
+                    Ele exige mais destreza e treinamento, e você precisa carregar suas flechas, mas te dá a vantagem de atacar antes que o inimigo chegue perto. 
+                    É a arma do caçador, do arqueiro élfico ou do personagem que prefere a precisão à força."
+                </p>
+            </div>
         </div>
     </div>
 
