@@ -1,1 +1,164 @@
-<h1>anão</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raças - Blog de RPG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Para organizar os elementos verticalmente */
+            justify-content: flex-start; /* Alinha o conteúdo no topo */
+            align-items: center;
+            min-height: 100vh;
+            /* PROPRIEDADES PARA A IMAGEM DE FUNDO (COLOQUE A SUA AQUI) */
+            background-image: url(../imagens/classes-side-by-side.jpg); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: rgba(240, 230, 210, 0.9); /* Bege claro com um pouco de transparência */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 700px;
+            line-height: 1.6;
+            margin-top: 20px; /* Adiciona margem no topo */
+            display: flex; /* Adicionado para centralizar conteúdo interno como um todo */
+            flex-direction: column; /* Organiza os itens (botão, título, raças) em coluna */
+            align-items: center; /* Centraliza os itens horizontalmente dentro do container */
+        }
+
+        /* Estilo para o botão Voltar para Home */
+        .home-button {
+            display: inline-block;
+            background-color: #8fbc8f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            align-self: flex-start; /* Alinha o botão à esquerda dentro do container */
+        }
+
+        .home-button:hover {
+            background-color: #7a9c7a;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8fbc8f;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            width: 100%; /* Para o título centralizado funcionar bem com flexbox */
+        }
+
+        h2 {
+            color: #5a7d5a;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #d3d3d3;
+            padding-bottom: 5px;
+            width: 100%; /* Para o subtítulo funcionar bem com flexbox */
+            text-align: left; /* Garante que subtítulos fiquem à esquerda */
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: left; /* Garante que parágrafos fiquem à esquerda */
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            text-align: left; /* Garante que listas fiquem à esquerda */
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Estilo para cada bloco de raça */
+        .race {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #d3d3d3;
+            border-radius: 8px;
+            background-color: #fff; /* Fundo branco para as raças */
+            width: 100%; /* Ocupa a largura total do container */
+            box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+
+            display: flex; /* Ativa o flexbox para alinhar imagem e texto */
+            align-items: center; /* Alinha verticalmente os itens no centro */
+            gap: 20px; /* Espaçamento entre a imagem e o bloco de texto */
+        }
+
+        .race img {
+            width: 100px; /* Largura da imagem, ajuste se necessário */
+            height: 100px; /* Altura da imagem, para ser quadrada como thumbnails */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer, cortando se necessário */
+            border-radius: 4px; /* Arredonda os cantos da imagem */
+            flex-shrink: 0; /* Impede que a imagem encolha se o texto for muito longo */
+        }
+
+        .race-info {
+            flex-grow: 1; /* Permite que o bloco de texto ocupe o espaço restante */
+            text-align: left;
+        }
+
+        .race-info h3 {
+            color: #8fbc8f; /* Cor do título da raça */
+            margin-top: 0; /* Remove margem superior padrão do h3 */
+            margin-bottom: 5px;
+        }
+
+        .race-info p {
+            margin-bottom: 0; /* Remove margem inferior padrão do p dentro do info */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../home.html" class="home-button">← Voltar para a Home</a>
+
+        <h1>Raças do Mundo de Arcana</h1>
+
+        <div class="race">
+            <img src="../imagens/original.png" alt="Ícone de Humano">
+            <div class="race-info">
+                <h3>Humanos</h3>
+                <p>Adaptáveis e versáteis, os humanos são a raça mais comum em Arcana. Possuem uma grande variedade de culturas e habilidades.</p>
+            </div>
+        </div>
+
+        <div class="race">
+            <img src="../imagens/c2de807e984914af9112d45b064c5490.jpg" alt="Ícone de Elfo">
+            <div class="race-info">
+                <h3>Elfos</h3>
+                <p>Elegantes e ligados à natureza, os elfos são conhecidos por sua beleza, longevidade e afinidade com a magia.</p>
+            </div>
+        </div>
+
+        <div class="race">
+            <img src="../imagens/d72068b884c416ab4e23755816b49a6b.jpg" alt="Ícone de Draconato">
+            <div class="race-info">
+                <h3>Draconatos</h3>
+                <p>Descendentes de dragões, os draconatos são seres imponentes, com escamas, garras e um sopro elemental que reflete sua ancestralidade.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
